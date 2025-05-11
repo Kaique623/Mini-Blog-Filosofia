@@ -35,6 +35,24 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
+        .knowledge-card {
+            transition: transform 0.3s ease;
+        }
+
+        .knowledge-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-placeholder {
+            background: #e9ecef;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
         @media (max-width: 768px) {
             .nav-pills {
                 flex-direction: row !important;
@@ -51,6 +69,10 @@
                 margin: 1rem;
                 padding: 1rem;
             }
+            
+            .hero-section {
+                padding: 2rem 0;
+            }
         }
     </style>
 </head>
@@ -64,80 +86,96 @@
             <hr>
             <div class="row">
                 <div class="col-md-3 col-6 mb-2">
-                    <div class="badge bg-primary">Kaique</div>
+                    <div class="badge bg-primary p-2">Kaique</div>
                 </div>
                 <div class="col-md-3 col-6 mb-2">
-                    <div class="badge bg-success">Isabel</div>
+                    <div class="badge bg-success p-2">Isabel</div>
                 </div>
                 <div class="col-md-3 col-6">
-                    <div class="badge bg-warning">Lara</div>
+                    <div class="badge bg-warning p-2">Lara</div>
                 </div>
                 <div class="col-md-3 col-6">
-                    <div class="badge bg-danger">Afonso</div>
+                    <div class="badge bg-danger p-2">Afonso</div>
                 </div>
             </div>
         </div>
     </header>
 
     <main class="container">
+        <!-- Grid de Artigos -->
+        <div class="row row-cols-1 row-cols-lg-2 g-4 mb-5">
+            <!-- Artigo Principal -->
+            <div class="col">
+                <div class="card h-100 shadow knowledge-card">
+                    <div class="image-placeholder">
+                        <span class="text-muted">Imagem da Caverna</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Alegoria da Caverna</h3>
+                        <a href="#artigo-caverna" class="btn btn-outline-primary" data-bs-toggle="collapse">Expandir Artigo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Novo Artigo Placeholder -->
+            <div class="col">
+                <div class="card h-100 shadow knowledge-card">
+                    <div class="image-placeholder">
+                        <span class="text-muted">Novo Artigo</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Próximo Artigo</h3>
+                        <button class="btn btn-outline-secondary" disabled>Em Breve</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Conteúdo do Artigo -->
-        <div class="article-section">
-            <nav class="nav nav-pills mb-4">
-                <a class="nav-link active" href="#alegoria" data-bs-toggle="pill">A Alegoria</a>
-                <a class="nav-link" href="#libertacao" data-bs-toggle="pill">Libertação</a>
-                <a class="nav-link" href="#dilema" data-bs-toggle="pill">Dilema</a>
-                <a class="nav-link" href="#reflexao" data-bs-toggle="pill">Atualidade</a>
-            </nav>
+        <div id="artigo-caverna" class="collapse show">
+            <div class="article-section">
+                <nav class="nav nav-pills mb-4">
+                    <a class="nav-link active" href="#alegoria" data-bs-toggle="pill">A Alegoria</a>
+                    <a class="nav-link" href="#libertacao" data-bs-toggle="pill">Libertação</a>
+                    <a class="nav-link" href="#dilema" data-bs-toggle="pill">Dilema</a>
+                    <a class="nav-link" href="#reflexao" data-bs-toggle="pill">Atualidade</a>
+                </nav>
 
-            <div class="tab-content">
-                <!-- Seção Alegoria -->
-                <div class="tab-pane fade show active" id="alegoria">
-                    <h3 class="mb-4">Alegoria da Caverna de Platão</h3>
-                    <div class="image-placeholder bg-secondary text-white p-4 rounded mb-4">
-                        Inserir imagem ilustrativa da caverna
+                <div class="tab-content">
+                    <!-- Seção Alegoria -->
+                    <div class="tab-pane fade show active" id="alegoria">
+                        <h3 class="mb-4">Alegoria da Caverna de Platão</h3>
+                        <p>No texto, Sócrates fala para Glauco imaginar a existência de uma caverna onde prisioneiros vivessem desde a infância. Com as mãos amarradas em uma parede, eles podem avistar somente as sombras que são projetadas na parede situada à frente.</p>
+                        <p>As sombras são ocasionadas por uma fogueira, em cima de um tapume, situada na parte traseira da parede em que os homens estão presos. Homens passam ante a fogueira, fazem gestos e passam objetos, formando sombras que, de maneira distorcida, são todo o conhecimento que os prisioneiros tinham do mundo.</p>
+                        
+                        <div class="sources mt-4 p-3 bg-light rounded">
+                            <h5>Fontes de Pesquisa:</h5>
+                            <ul>
+                                <li>Platão - A República, Livro VII</li>
+                                <li>[Inserir outras fontes]</li>
+                            </ul>
+                        </div>
                     </div>
-                    <p>No texto, Sócrates fala para Glauco imaginar a existência de uma caverna onde prisioneiros vivessem desde a infância. Com as mãos amarradas em uma parede, eles podem avistar somente as sombras que são projetadas na parede situada à frente.</p>
-                    <p>As sombras são ocasionadas por uma fogueira, em cima de um tapume, situada na parte traseira da parede em que os homens estão presos. Homens passam ante a fogueira, fazem gestos e passam objetos, formando sombras que, de maneira distorcida, são todo o conhecimento que os prisioneiros tinham do mundo.</p>
-                    <p>Aquela parede da caverna, aquelas sombras e os ecos dos sons que as pessoas de cima produziam era o mundo restrito dos prisioneiros.</p>
-                    
-                    <div class="sources mt-4 p-3 bg-light rounded">
-                        <h5>Fontes de Pesquisa:</h5>
-                        <ul>
-                            <li>Platão - A República, Livro VII</li>
-                            <li>[Inserir outras fontes]</li>
-                        </ul>
-                    </div>
-                </div>
 
-                <!-- Seção Libertação -->
-                <div class="tab-pane fade" id="libertacao">
-                    <h3 class="mb-4">A Libertação do Prisioneiro</h3>
-                    <div class="image-placeholder bg-secondary text-white p-4 rounded mb-4">
-                        Inserir imagem da saída da caverna
+                    <!-- Seção Libertação -->
+                    <div class="tab-pane fade" id="libertacao">
+                        <h3 class="mb-4">A Libertação do Prisioneiro</h3>
+                        <p>Repentinamente, um dos prisioneiros foi liberto. Andando pela caverna, ele percebe que havia pessoas e uma fogueira projetando as sombras que ele julgava ser a totalidade do mundo.</p>
+                        <p>Ao encontrar a saída da caverna, ele tem um susto ao deparar-se com o mundo exterior. A luz solar ofusca a sua visão e ele sente-se desamparado, desconfortável, deslocado. Aos poucos, sua visão acostuma-se com a luz e ele começa a perceber a infinidade do mundo e da natureza que existe fora da caverna.</p>
                     </div>
-                    <p>Repentinamente, um dos prisioneiros foi liberto. Andando pela caverna, ele percebe que havia pessoas e uma fogueira projetando as sombras que ele julgava ser a totalidade do mundo.</p>
-                    <p>Ao encontrar a saída da caverna, ele tem um susto ao deparar-se com o mundo exterior. A luz solar ofusca a sua visão e ele sente-se desamparado, desconfortável, deslocado. Aos poucos, sua visão acostuma-se com a luz e ele começa a perceber a infinidade do mundo e da natureza que existe fora da caverna.</p>
-                    <p>Ele percebe que aquelas sombras, que ele julgava ser a realidade, na verdade são cópias imperfeitas de uma pequena parcela da realidade.</p>
-                </div>
 
-                <!-- Seção Dilema -->
-                <div class="tab-pane fade" id="dilema">
-                    <h3 class="mb-4">Dilema do Prisioneiro Liberto</h3>
-                    <div class="image-placeholder bg-secondary text-white p-4 rounded mb-4">
-                        Inserir imagem simbólica de escolha
+                    <!-- Seção Dilema -->
+                    <div class="tab-pane fade" id="dilema">
+                        <h3 class="mb-4">Dilema do Prisioneiro Liberto</h3>
+                        <p>O prisioneiro liberto poderia fazer duas coisas: retornar para a caverna e libertar os seus companheiros ou viver a sua liberdade. Uma possível consequência da primeira possibilidade seria os ataques que sofreria de seus companheiros, que o julgariam como louco, mas poderia ser uma atitude necessária, por ser a coisa mais justa a se fazer.</p>
                     </div>
-                    <p>O prisioneiro liberto poderia fazer duas coisas: retornar para a caverna e libertar os seus companheiros ou viver a sua liberdade. Uma possível consequência da primeira possibilidade seria os ataques que sofreria de seus companheiros, que o julgariam como louco, mas poderia ser uma atitude necessária, por ser a coisa mais justa a se fazer.</p>
-                </div>
 
-                <!-- Seção Reflexão -->
-                <div class="tab-pane fade" id="reflexao">
-                    <h3 class="mb-4">Reflexão sobre a Sociedade Atual</h3>
-                    <div class="image-placeholder bg-secondary text-white p-4 rounded mb-4">
-                        Inserir imagem contemporânea
+                    <!-- Seção Reflexão -->
+                    <div class="tab-pane fade" id="reflexao">
+                        <h3 class="mb-4">Reflexão sobre a Sociedade Atual</h3>
+                        <p>Platão está dispondo, hierarquicamente, os graus de conhecimento com essa metáfora e falando que existe um modo de conhecer, de saber, que é o mais adequado para se pensar em um governante capaz de fazer política com sabedoria e justiça.</p>
+                        <p>Os escravos presos no interior da caverna não percebem que são prisioneiros, assim como as pessoas que estão presas na mídia, nas redes sociais e no mar de informações, muitas vezes desinformantes, da internet, não percebem que são enganadas. Vivemos na época do predomínio da opinião rasa, do conhecimento superficial, da informação inútil e da prisão cotidiana que arrasta as pessoas, cada vez mais, para a caverna da ignorância.</p>
                     </div>
-                    <p>Platão está dispondo, hierarquicamente, os graus de conhecimento com essa metáfora e falando que existe um modo de conhecer, de saber, que é o mais adequado para se pensar em um governante capaz de fazer política com sabedoria e justiça.</p>
-                    <p>Propaganda de vidas felizes, mas que, superficialmente, sequer sabem o peso que a sua existência traz para o mundo. A ignorância, em nossos tempos, é cultivada e celebrada. Quem ousa opor-se a esse tipo de vida vulgar, soterrada na ignorância, presa na caverna como estavam os prisioneiros de Platão, é considerado louco.</p>
-                    <p>Os escravos presos no interior da caverna não percebem que são prisioneiros, assim como as pessoas que estão presas na mídia, nas redes sociais e no mar de informações, muitas vezes desinformantes, da internet, não percebem que são enganadas. Vivemos na época do predomínio da opinião rasa, do conhecimento superficial, da informação inútil e da prisão cotidiana que arrasta as pessoas, cada vez mais, para a caverna da ignorância.</p>
                 </div>
             </div>
         </div>
