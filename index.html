@@ -1,134 +1,152 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mini Blog Filosófico</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #f9f9f9;
-      font-family: 'Segoe UI', sans-serif;
-    }
-    header {
-      background: linear-gradient(135deg, #343a40, #212529);
-      color: white;
-      padding: 20px 0;
-    }
-    .nav-tabs .nav-link {
-      font-weight: 500;
-    }
-    .content-section {
-      background-color: white;
-      border-radius: 10px;
-      padding: 30px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      margin-top: 20px;
-    }
-    .image-placeholder {
-      background-color: #ddd;
-      width: 100%;
-      height: 200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #666;
-      border-radius: 8px;
-      font-size: 18px;
-    }
-    footer {
-      background-color: #212529;
-      color: white;
-      padding: 30px 0;
-      margin-top: 40px;
-    }
-    footer a {
-      color: #adb5bd;
-      text-decoration: none;
-    }
-    footer a:hover {
-      color: white;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filosofia Contemporânea</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .nav-link.active {
+            background-color: #f8f9fa !important;
+            border-bottom: 3px solid #0d6efd;
+        }
+        .content-section {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        .image-placeholder {
+            background-color: #e9ecef;
+            min-height: 300px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        blockquote {
+            border-left: 4px solid #0d6efd;
+            padding-left: 1rem;
+            margin: 1.5rem 0;
+            color: #6c757d;
+        }
+    </style>
 </head>
-<body>
-
-  <!-- Cabeçalho -->
-  <header class="text-center">
-    <div class="container">
-      <h1 class="display-5">Mini Blog Filosófico</h1>
-      <p class="lead">Reflexões, metáforas e sabedoria através dos tempos</p>
-    </div>
-  </header>
-
-  <div class="container my-5">
-    <!-- Abas -->
-    <ul class="nav nav-tabs" id="filosofiaTabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="mito-tab" data-bs-toggle="tab" data-bs-target="#mito" type="button" role="tab">Mito da Caverna</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="imagens-tab" data-bs-toggle="tab" data-bs-target="#imagens" type="button" role="tab">Imagens</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="fontes-tab" data-bs-toggle="tab" data-bs-target="#fontes" type="button" role="tab">Fontes</button>
-      </li>
-      <!-- Adicione novas abas aqui -->
-    </ul>
-
-    <div class="tab-content" id="filosofiaTabsContent">
-      <!-- Aba: Mito da Caverna -->
-      <div class="tab-pane fade show active content-section" id="mito" role="tabpanel">
-        <h3 class="mb-4">Alegoria da Caverna de Platão</h3>
-        <p><strong>Resumo:</strong> No texto, Sócrates fala para Glauco imaginar a existência de uma caverna onde prisioneiros vivessem desde a infância, vendo apenas sombras projetadas na parede à frente. Essas sombras seriam a única realidade conhecida por eles.</p>
-
-        <h5 class="mt-4">A Libertação do Prisioneiro</h5>
-        <p>Um dos prisioneiros é libertado e passa a descobrir a verdade além das sombras. No início, a luz do sol o incomoda, mas ele começa a compreender a realidade e se desilude com as falsas imagens da caverna.</p>
-
-        <h5 class="mt-4">Dilema do Prisioneiro Liberto</h5>
-        <p>Ele pode retornar e libertar os outros, arriscando ser rejeitado, ou seguir sua nova vida. O retorno representa a missão do filósofo de trazer sabedoria, mesmo sendo incompreendido.</p>
-
-        <h5 class="mt-4">Reflexão Atual</h5>
-        <p>Platão sugere que muitos vivem ainda hoje presos às "sombras" da ignorância — como a mídia superficial e redes sociais — sem consciência do mundo real e da verdadeira sabedoria.</p>
-      </div>
-
-      <!-- Aba: Imagens -->
-      <div class="tab-pane fade content-section" id="imagens" role="tabpanel">
-        <h4>Galeria de Imagens</h4>
-        <div class="row mt-3">
-          <div class="col-md-6 mb-4">
-            <div class="image-placeholder">Imagem 1 - Caverna (substitua aqui)</div>
-            <p class="text-muted mt-2">Legenda: Representação dos prisioneiros.</p>
-          </div>
-          <div class="col-md-6 mb-4">
-            <div class="image-placeholder">Imagem 2 - Sol e Liberdade</div>
-            <p class="text-muted mt-2">Legenda: Prisioneiro diante da verdade.</p>
-          </div>
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#">Blog Filosófico</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#alegoria" data-bs-toggle="tab">A Alegoria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#libertacao" data-bs-toggle="tab">A Libertação</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#dilema" data-bs-toggle="tab">O Dilema</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reflexao" data-bs-toggle="tab">Reflexão Atual</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
+    </nav>
 
-      <!-- Aba: Fontes -->
-      <div class="tab-pane fade content-section" id="fontes" role="tabpanel">
-        <h4>Fontes de Pesquisa</h4>
-        <ul class="mt-3">
-          <li><a href="#">Platão – A República</a></li>
-          <li><a href="#">Comentários acadêmicos sobre a Alegoria da Caverna</a></li>
-          <li><a href="#">Artigos sobre Filosofia Clássica</a></li>
-          <!-- Adicione mais fontes conforme necessário -->
-        </ul>
-      </div>
+    <!-- Conteúdo -->
+    <div class="container mt-4">
+        <div class="tab-content">
+            <!-- Seção Alegoria -->
+            <div class="tab-pane fade show active" id="alegoria">
+                <div class="content-section">
+                    <h2>Alegoria da Caverna</h2>
+                    <div class="image-placeholder">
+                        <span>Inserir imagem da caverna</span>
+                    </div>
+                    <p>Sócrates descreve uma caverna onde prisioneiros desde a infância...</p>
+                    <blockquote>
+                        "As sombras projetadas eram toda a realidade conhecida pelos prisioneiros"
+                    </blockquote>
+                    <div class="sources bg-light p-3 rounded">
+                        <h5>Fontes:</h5>
+                        <ul>
+                            <li>Platão - A República, Livro VII</li>
+                            <li>[Inserir outras fontes]</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção Libertação -->
+            <div class="tab-pane fade" id="libertacao">
+                <div class="content-section">
+                    <h2>A Libertação</h2>
+                    <div class="image-placeholder">
+                        <span>Inserir imagem representando a saída da caverna</span>
+                    </div>
+                    <p>O prisioneiro liberto enfrenta a realidade exterior...</p>
+                    <blockquote>
+                        "A luz solar ofusca sua visão - metáfora do conhecimento verdadeiro"
+                    </blockquote>
+                    <div class="sources bg-light p-3 rounded">
+                        <h5>Fontes:</h5>
+                        <ul>
+                            <li>[Inserir fontes sobre interpretações modernas]</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção Dilema -->
+            <div class="tab-pane fade" id="dilema">
+                <div class="content-section">
+                    <h2>O Dilema Ético</h2>
+                    <div class="image-placeholder">
+                        <span>Inserir imagem simbólica de escolha</span>
+                    </div>
+                    <p>A difícil decisão entre o conforto da ignorância e a responsabilidade do conhecimento...</p>
+                    <blockquote>
+                        "Retornar à caverna seria um ato de coragem e altruísmo"
+                    </blockquote>
+                    <div class="sources bg-light p-3 rounded">
+                        <h5>Fontes:</h5>
+                        <ul>
+                            <li>[Inserir fontes filosóficas]</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção Reflexão -->
+            <div class="tab-pane fade" id="reflexao">
+                <div class="content-section">
+                    <h2>Atualidade da Alegoria</h2>
+                    <div class="image-placeholder">
+                        <span>Inserir imagem contemporânea</span>
+                    </div>
+                    <p>Paralelos com a sociedade da informação e redes sociais...</p>
+                    <blockquote>
+                        "Vivemos na era das sombras digitais"
+                    </blockquote>
+                    <div class="sources bg-light p-3 rounded">
+                        <h5>Fontes:</h5>
+                        <ul>
+                            <li>[Inserir fontes sobre mídia e sociedade]</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- Rodapé -->
-  <footer class="text-center">
-    <div class="container">
-      <p class="mb-1">&copy; 2025 Mini Blog Filosófico</p>
-      <small>Projeto pessoal para reflexões e estudos filosóficos.</small>
-    </div>
-  </footer>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
