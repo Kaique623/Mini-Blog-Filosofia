@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Portal Filosófico</title>
+    <title>Alegoria da Caverna - 3° Ano Bege</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         :root {
@@ -14,43 +14,28 @@
         .hero-section {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://picsum.photos/1920/600') center/cover;
             color: white;
-            padding: 6rem 0;
+            padding: 4rem 0;
             margin-bottom: 2rem;
         }
 
-        .nav-pills .nav-link {
+        .team-info {
+            background: rgba(255, 255, 255, 0.9);
             color: var(--main-color);
-            border-radius: 0;
-            transition: all 0.3s ease;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 600px;
         }
 
-        .nav-pills .nav-link.active {
-            background: transparent;
-            color: var(--accent-color);
-            border-left: 4px solid var(--accent-color);
-        }
-
-        .knowledge-card {
-            background: #f8f9fa;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .knowledge-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .content-img {
-            height: 400px;
-            object-fit: cover;
-            border-radius: 8px;
+        .article-section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         @media (max-width: 768px) {
-            .content-img {
-                height: 250px;
-            }
-            
             .nav-pills {
                 flex-direction: row !important;
                 overflow-x: auto;
@@ -59,6 +44,12 @@
             
             .nav-link {
                 white-space: nowrap;
+                font-size: 0.9rem;
+            }
+            
+            .team-info {
+                margin: 1rem;
+                padding: 1rem;
             }
         }
     </style>
@@ -67,64 +58,86 @@
 
     <!-- Hero Section -->
     <header class="hero-section text-center">
-        <div class="container">
-            <h1 class="display-4 mb-4">Portal da Reflexão</h1>
-            <p class="lead">Um espaço para explorar ideias filosóficas e questionar a realidade contemporânea</p>
-            <hr class="w-50 mx-auto my-4">
-            <p class="text-muted">"Conhece-te a ti mesmo e conhecerás o universo" - Oráculo de Delfos</p>
+        <div class="team-info">
+            <h2 class="mb-3">Trabalho de Filosofia</h2>
+            <h4 class="text-muted">3° Ano Bege - EM</h4>
+            <hr>
+            <div class="row">
+                <div class="col-md-3 col-6 mb-2">
+                    <div class="badge bg-primary">Kaique</div>
+                </div>
+                <div class="col-md-3 col-6 mb-2">
+                    <div class="badge bg-success">Isabel</div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="badge bg-warning">Lara</div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="badge bg-danger">Afonso</div>
+                </div>
+            </div>
         </div>
     </header>
 
     <main class="container">
-        <div class="row g-4">
-            <!-- Conteúdo Principal -->
-            <div class="col-lg-8">
-                <div class="row">
-                    <div class="col-md-3">
-                        <nav class="nav flex-column nav-pills">
-                            <a class="nav-link active" data-bs-toggle="pill" href="#alegoria">Alegoria</a>
-                            <a class="nav-link" data-bs-toggle="pill" href="#libertacao">Libertação</a>
-                            <a class="nav-link" data-bs-toggle="pill" href="#dilema">Dilema</a>
-                            <a class="nav-link" data-bs-toggle="pill" href="#reflexao">Atualidade</a>
-                        </nav>
-                    </div>
+        <!-- Conteúdo do Artigo -->
+        <div class="article-section">
+            <nav class="nav nav-pills mb-4">
+                <a class="nav-link active" href="#alegoria" data-bs-toggle="pill">A Alegoria</a>
+                <a class="nav-link" href="#libertacao" data-bs-toggle="pill">Libertação</a>
+                <a class="nav-link" href="#dilema" data-bs-toggle="pill">Dilema</a>
+                <a class="nav-link" href="#reflexao" data-bs-toggle="pill">Atualidade</a>
+            </nav>
 
-                    <div class="col-md-9">
-                        <div class="tab-content">
-                            <!-- Conteúdos das abas (manter o mesmo conteúdo anterior) -->
-                            <!-- [Inserir aqui o conteúdo das abas do código anterior] -->
-                        </div>
+            <div class="tab-content">
+                <!-- Seção Alegoria -->
+                <div class="tab-pane fade show active" id="alegoria">
+                    <h3 class="mb-4">Alegoria da Caverna de Platão</h3>
+                    <div class="image-placeholder bg-secondary text-white p-4 rounded mb-4">
+                        Inserir imagem ilustrativa da caverna
                     </div>
-                </div>
-            </div>
-
-            <!-- Área de Conhecimentos Filosóficos -->
-            <div class="col-lg-4">
-                <div class="p-4 knowledge-card shadow">
-                    <h3 class="mb-4">📚 Conceitos-Chave</h3>
-                    <div class="mb-4">
-                        <h5>Epistemologia</h5>
-                        <p class="text-muted">Teoria do conhecimento: como sabemos o que sabemos?</p>
-                    </div>
-                    <div class="mb-4">
-                        <h5>Ontologia</h5>
-                        <p class="text-muted">Estudo da natureza do ser e da realidade</p>
-                    </div>
-                    <div class="mb-4">
-                        <h5>Ética</h5>
-                        <p class="text-muted">Reflexão sobre moralidade e conduta humana</p>
-                    </div>
-                    <div class="text-center">
-                        <button class="btn btn-outline-primary">Ver Mais</button>
+                    <p>No texto, Sócrates fala para Glauco imaginar a existência de uma caverna onde prisioneiros vivessem desde a infância. Com as mãos amarradas em uma parede, eles podem avistar somente as sombras que são projetadas na parede situada à frente.</p>
+                    <p>As sombras são ocasionadas por uma fogueira, em cima de um tapume, situada na parte traseira da parede em que os homens estão presos. Homens passam ante a fogueira, fazem gestos e passam objetos, formando sombras que, de maneira distorcida, são todo o conhecimento que os prisioneiros tinham do mundo.</p>
+                    <p>Aquela parede da caverna, aquelas sombras e os ecos dos sons que as pessoas de cima produziam era o mundo restrito dos prisioneiros.</p>
+                    
+                    <div class="sources mt-4 p-3 bg-light rounded">
+                        <h5>Fontes de Pesquisa:</h5>
+                        <ul>
+                            <li>Platão - A República, Livro VII</li>
+                            <li>[Inserir outras fontes]</li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="mt-4 p-4 knowledge-card shadow">
-                    <h3 class="mb-4">⚡ Pensamento Rápido</h3>
-                    <blockquote class="blockquote">
-                        <p>"Só sei que nada sei"</p>
-                        <footer class="blockquote-footer">Sócrates</footer>
-                    </blockquote>
+                <!-- Seção Libertação -->
+                <div class="tab-pane fade" id="libertacao">
+                    <h3 class="mb-4">A Libertação do Prisioneiro</h3>
+                    <div class="image-placeholder bg-secondary text-white p-4 rounded mb-4">
+                        Inserir imagem da saída da caverna
+                    </div>
+                    <p>Repentinamente, um dos prisioneiros foi liberto. Andando pela caverna, ele percebe que havia pessoas e uma fogueira projetando as sombras que ele julgava ser a totalidade do mundo.</p>
+                    <p>Ao encontrar a saída da caverna, ele tem um susto ao deparar-se com o mundo exterior. A luz solar ofusca a sua visão e ele sente-se desamparado, desconfortável, deslocado. Aos poucos, sua visão acostuma-se com a luz e ele começa a perceber a infinidade do mundo e da natureza que existe fora da caverna.</p>
+                    <p>Ele percebe que aquelas sombras, que ele julgava ser a realidade, na verdade são cópias imperfeitas de uma pequena parcela da realidade.</p>
+                </div>
+
+                <!-- Seção Dilema -->
+                <div class="tab-pane fade" id="dilema">
+                    <h3 class="mb-4">Dilema do Prisioneiro Liberto</h3>
+                    <div class="image-placeholder bg-secondary text-white p-4 rounded mb-4">
+                        Inserir imagem simbólica de escolha
+                    </div>
+                    <p>O prisioneiro liberto poderia fazer duas coisas: retornar para a caverna e libertar os seus companheiros ou viver a sua liberdade. Uma possível consequência da primeira possibilidade seria os ataques que sofreria de seus companheiros, que o julgariam como louco, mas poderia ser uma atitude necessária, por ser a coisa mais justa a se fazer.</p>
+                </div>
+
+                <!-- Seção Reflexão -->
+                <div class="tab-pane fade" id="reflexao">
+                    <h3 class="mb-4">Reflexão sobre a Sociedade Atual</h3>
+                    <div class="image-placeholder bg-secondary text-white p-4 rounded mb-4">
+                        Inserir imagem contemporânea
+                    </div>
+                    <p>Platão está dispondo, hierarquicamente, os graus de conhecimento com essa metáfora e falando que existe um modo de conhecer, de saber, que é o mais adequado para se pensar em um governante capaz de fazer política com sabedoria e justiça.</p>
+                    <p>Propaganda de vidas felizes, mas que, superficialmente, sequer sabem o peso que a sua existência traz para o mundo. A ignorância, em nossos tempos, é cultivada e celebrada. Quem ousa opor-se a esse tipo de vida vulgar, soterrada na ignorância, presa na caverna como estavam os prisioneiros de Platão, é considerado louco.</p>
+                    <p>Os escravos presos no interior da caverna não percebem que são prisioneiros, assim como as pessoas que estão presas na mídia, nas redes sociais e no mar de informações, muitas vezes desinformantes, da internet, não percebem que são enganadas. Vivemos na época do predomínio da opinião rasa, do conhecimento superficial, da informação inútil e da prisão cotidiana que arrasta as pessoas, cada vez mais, para a caverna da ignorância.</p>
                 </div>
             </div>
         </div>
