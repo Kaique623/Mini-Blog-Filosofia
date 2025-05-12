@@ -25,7 +25,21 @@
             border-radius: 15px;
             padding: 2rem;
             margin: 2rem auto;
-            max-width: 600px;
+            max-width: 800px;
+        }
+
+        .group-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 2rem 0;
+        }
+
+        .group-quote {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #6c757d;
         }
 
         .article-card {
@@ -39,21 +53,29 @@
             box-shadow: 0 8px 16px rgba(0,0,0,0.1);
         }
 
+        .article-image-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .article-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .content-section {
             background: white;
             border-radius: 15px;
             padding: 2rem;
             margin: 1rem 0;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-
-        .article-image {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin: 1rem 0;
-            border: 2px solid #dee2e6;
         }
 
         .btn-expand {
@@ -101,6 +123,17 @@
         <div class="team-info">
             <h2 class="mb-3">Trabalho de Filosofia</h2>
             <h4 class="text-muted">3° Ano Bege - EM</h4>
+            
+            <div class="group-description">
+                <p>Nosso grupo é formado por quatro pessoas bem diferentes, mas que se completam de um jeito natural. Cada um possui seu jeito de pensar, agir e de enxergar o mundo, mas foi justamente isso que nos fez aprender tanto juntos. Ao longo dos trabalhos, percebemos que a filosofia não está só nos livros, ela está também nas nossas conversas e nas decisões em grupo.</p>
+                
+                <div class="group-quote">
+                    "Como Aristóteles dizia, a amizade verdadeira se constrói na virtude e no querer o bem do outro. E é isso que tentamos praticar: ajudar, ouvir e aprender uns com os outros."
+                </div>
+
+                <p>Trabalhar em grupo nem sempre é fácil, mas quando todos se ajudam, tudo flui melhor. No fim, laços que se conectam dentro e fora da sala de aula.</p>
+            </div>
+
             <hr>
             <div class="row">
                 <div class="col-md-3 col-6 mb-2">
@@ -124,7 +157,9 @@
         <div class="row mb-4">
             <div class="col">
                 <div class="card article-card shadow" id="mainCard">
-                    <img src="./imagens/caverna-de-platao.png" class="article-image" alt="Ilustração da Caverna de Platão">
+                    <div class="article-image-container">
+                        <img src="./imagens/caverna_de_platao.png" class="article-image" alt="Ilustração da Caverna de Platão">
+                    </div>
                     <div class="card-body text-center">
                         <h3 class="card-title mb-2">Alegoria da Caverna de Platão</h3>
                         <small class="text-muted d-block mb-3">Postado em 12 de Maio de 2025</small>
