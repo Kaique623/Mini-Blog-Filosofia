@@ -193,7 +193,8 @@
       </div>
     </div>
 
-          <!-- Sócrates e sofistas -->
+    <div class="row row-cols-1 row-cols-lg-2 g-4 mb-5">
+      <!-- Sócrates e sofistas -->
       <div class="col">
         <div class="card article-card shadow">
           <img src="./imagens/socrates_e_sofistas.png" class="article-image" alt="Sofistas">
@@ -244,19 +245,87 @@
           </div>
         </div>
       </div>
-    </div>
-    
-  </main>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    window.addEventListener('scroll', () => {
-      const winScroll = document.body.scrollTop || document.documentElement.scrollTop
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight
-      document.querySelector('.progress-bar').style.width = (winScroll / height) * 100 + '%'
       
-      document.querySelector('.scroll-top').classList.toggle('show', window.scrollY > 500)
-    })
-  </script>
-</body>
-</html>
+      <!-- NOVO ARTIGO: Teoria dos Dois Mundos -->
+      <div class="col">
+        <div class="card article-card shadow">
+          <img src="./imagens/dois_mundos_platao.png" class="article-image" alt="Teoria dos Dois Mundos de Platão">
+          <div class="card-body text-center">
+            <h3 class="card-title mb-2">Teoria dos Dois Mundos</h3>
+            <small class="text-muted d-block mb-3">Publicado em 04/06/2025</small>
+            <button class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#doisMundosContent">
+              Expandir Artigo
+            </button>
+          </div>
+          <div class="collapse" id="doisMundosContent">
+            <div class="p-4">
+              <nav class="nav nav-pills mb-4 justify-content-center">
+                <a class="nav-link active" data-bs-toggle="pill" href="#visaoGeral">Visão Geral</a>
+                <a class="nav-link" data-bs-toggle="pill" href="#mundoSensivel">Mundo Sensível</a>
+                <a class="nav-link" data-bs-toggle="pill" href="#mundoInteligivel">Mundo Inteligível</a>
+                <a class="nav-link" data-bs-toggle="pill" href="#relacao">Relação</a>
+                <a class="nav-link" data-bs-toggle="pill" href="#conhecimento">Conhecimento</a>
+                <a class="nav-link" data-bs-toggle="pill" href="#significado">Significado</a>
+              </nav>
+
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="visaoGeral">
+                  <h4 class="section-title">A Teoria dos Dois Mundos</h4>
+                  <p>Platão desenvolveu uma das teorias mais influentes da filosofia ocidental: a <strong>Teoria dos Dois Mundos</strong> (ou <strong>Dualismo Ontológico</strong>). Apresentada em obras como "A República" e "Fédon", esta teoria estabelece uma divisão radical entre dois níveis de realidade:</p>
+                  
+                  <div class="d-flex justify-content-center my-4">
+                    <div class="text-center mx-3">
+                      <div class="bg-primary text-white rounded-circle p-3 mb-2" style="width: 100px; height: 100px; display: inline-flex; align-items: center; justify-content: center;">
+                        <i class="bi bi-eye fs-1"></i>
+                      </div>
+                      <h5>Mundo Sensível</h5>
+                      <small>Realidade física</small>
+                    </div>
+                    
+                    <div class="text-center mx-3">
+                      <div class="bg-info text-white rounded-circle p-3 mb-2" style="width: 100px; height: 100px; display: inline-flex; align-items: center; justify-content: center;">
+                        <i class="bi bi-lightbulb fs-1"></i>
+                      </div>
+                      <h5>Mundo Inteligível</h5>
+                      <small>Realidade das Ideias</small>
+                    </div>
+                  </div>
+                  
+                  <p>Esta dualidade explica por que, para Platão, a filosofia é uma busca pela transcendência, libertando a alma das ilusões do sensível para contemplar as Ideias eternas.</p>
+                </div>
+
+                <div class="tab-pane fade" id="mundoSensivel">
+                  <h4 class="section-title">Mundo Sensível</h4>
+                  <p>Também chamado de <strong>Mundo das Aparências</strong>, é o mundo físico que percebemos através dos sentidos:</p>
+                  
+                  <ul class="list-group list-group-flush mb-4">
+                    <li class="list-group-item">
+                      <i class="bi bi-arrow-repeat me-2 text-primary"></i>
+                      <strong>Mutável</strong>: Tudo está em constante transformação (nasce, cresce, decai, morre)
+                    </li>
+                    <li class="list-group-item">
+                      <i class="bi bi-patch-exclamation me-2 text-primary"></i>
+                      <strong>Imperfeito</strong>: Objetos são cópias imperfeitas das Ideias
+                    </li>
+                    <li class="list-group-item">
+                      <i class="bi bi-cloud-haze me-2 text-primary"></i>
+                      <strong>Ilusório</strong>: Revela apenas aparências (doxa - opinião)
+                    </li>
+                    <li class="list-group-item">
+                      <i class="bi bi-bricks me-2 text-primary"></i>
+                      <strong>Material</strong>: Composto de elementos físicos (terra, ar, fogo, água)
+                    </li>
+                  </ul>
+                  
+                  <div class="alert alert-light">
+                    <i class="bi bi-info-circle me-2"></i>
+                    <strong>Exemplo:</strong> Uma rosa bela que murcha com o tempo é uma cópia imperfeita da Ideia eterna de Beleza.
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="mundoInteligivel">
+                  <h4 class="section-title">Mundo Inteligível</h4>
+                  <p>O mundo das <strong>Ideias (Eidos/Formas)</strong> eternas, imutáveis e perfeitas, acessível apenas pela razão:</p>
+                  
+                  <div class="row mb-4">
+      
