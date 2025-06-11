@@ -10,10 +10,12 @@
     :root {
       --main-color: #2c3e50;
       --accent-color: #3498db;
+      --aristotle-color: #8b4513;
     }
 
     body {
       background: linear-gradient(to bottom, #f4f6f8, #ffffff);
+      font-family: 'Georgia', serif;
     }
 
     .header-section {
@@ -37,6 +39,7 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;
       border: none;
+      margin-bottom: 2rem;
     }
 
     .article-card:hover {
@@ -52,9 +55,10 @@
     }
 
     .section-title {
-      border-left: 4px solid var(--accent-color);
+      border-left: 4px solid var(--aristotle-color);
       padding-left: 1rem;
       margin: 2rem 0;
+      color: var(--aristotle-color);
     }
 
     .philosophy-icon {
@@ -68,15 +72,98 @@
       right: 20px;
       opacity: 0;
       transition: opacity 0.3s;
+      z-index: 1000;
     }
 
     .scroll-top.show {
       opacity: 1;
     }
 
+    .timeline {
+      position: relative;
+      padding: 2rem 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      background-color: var(--aristotle-color);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    .timeline-content {
+      width: 45%;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+      float: left;
+      border-left: 3px solid var(--aristotle-color);
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+      float: right;
+      border-right: 3px solid var(--aristotle-color);
+    }
+
+    .philosopher-quote {
+      background: linear-gradient(135deg, #f9f5eb, #eaddca);
+      border-left: 4px solid var(--aristotle-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+    }
+
+    .concept-card {
+      border: 1px solid #eaddca;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      background: #f9f5eb;
+      transition: transform 0.3s;
+    }
+
+    .concept-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .concept-card h5 {
+      color: var(--aristotle-color);
+      border-bottom: 1px dashed #d4a76a;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
     @media (max-width: 768px) {
       .article-image {
         height: 200px;
+      }
+      
+      .timeline::before {
+        left: 20px;
+      }
+      
+      .timeline-content {
+        width: 85%;
+        margin-left: 40px;
+      }
+      
+      .timeline-item:nth-child(even) .timeline-content,
+      .timeline-item:nth-child(odd) .timeline-content {
+        float: none;
       }
     }
   </style>
@@ -99,422 +186,153 @@
   </header>
 
   <main class="container py-5">
-    <div class="row row-cols-1 row-cols-lg-2 g-4 mb-5">
-      <!-- Artigo sobre o Grupo -->
-      <div class="col">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
         <div class="card article-card shadow">
-          <img src="./imagens/grupo_filosofia.jpg" class="article-image" alt="Grupo de Filosofia">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Aristotle_Altemps_Inv8575.jpg" class="article-image" alt="Aristóteles">
           <div class="card-body text-center">
-            <h3 class="card-title mb-2">Sobre Nossa Equipe</h3>
-            <small class="text-muted d-block mb-3">Publicado em 12/05/2025</small>
-            <button class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#grupoContent">
-              Expandir Artigo
-            </button>
+            <h1 class="card-title mb-2">Aristóteles: O Filósofo da Razão e da Experiência</h1>
+            <small class="text-muted d-block mb-3">Publicado em 15/05/2025</small>
           </div>
-          <div class="collapse" id="grupoContent">
-            <div class="p-4">
-              <h4 class="section-title">Nosso Grupo</h4>
-              <p>Nosso grupo é formado por quatro pessoas bem diferentes, mas que se completam de um jeito natural. Cada um possui seu jeito de pensar, agir e de enxergar o mundo, mas foi justamente isso que nos fez aprender tanto juntos. Ao longo dos trabalhos, percebemos que a filosofia não está só nos livros, ela está também nas nossas conversas e nas decisões em grupo.</p>
+          
+          <div class="p-4">
+            <h3 class="section-title">Introdução</h3>
+            <p>Aristóteles (384-322 a.C.) foi um dos maiores filósofos da Grécia Antiga, aluno de Platão e professor de Alexandre, o Grande. Considerado o fundador da lógica formal e da biologia, sua obra abrange praticamente todas as áreas do conhecimento humano de sua época.</p>
+            
+            <div class="philosopher-quote">
+              <p>"O ignorante afirma, o sábio duvida, o sensato reflete."</p>
+              <footer class="blockquote-footer">Aristóteles</footer>
+            </div>
+            
+            <h3 class="section-title">Vida e Obra</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <h5>384 a.C.</h5>
+                  <p>Nasce em Estagira, na Macedônia. Filho de Nicômaco, médico do rei Amintas III.</p>
+                </div>
+              </div>
               
-              <div class="row mb-4 text-center">
-                <div class="col-6 col-md-3 mb-3">
-                  <div class="badge bg-primary p-2">Kaique</div>
-                </div>
-                <div class="col-6 col-md-3 mb-3">
-                  <div class="badge bg-success p-2">Isabel</div>
-                </div>
-                <div class="col-6 col-md-3">
-                  <div class="badge bg-warning p-2">Lara</div>
-                </div>
-                <div class="col-6 col-md-3">
-                  <div class="badge bg-danger p-2">Afonso</div>
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <h5>367 a.C.</h5>
+                  <p>Aos 17 anos, ingressa na Academia de Platão em Atenas, onde permanece por 20 anos.</p>
                 </div>
               </div>
-
-              <blockquote class="blockquote bg-light p-3 rounded">
-                <p>"Como Aristóteles dizia, a amizade verdadeira se constrói na virtude e no querer o bem do outro. E é isso que tentamos praticar: ajudar, ouvir e aprender uns com os outros."</p>
-              </blockquote>
-
-              <p>Trabalhar em grupo nem sempre é fácil, mas quando todos se ajudam, tudo flui melhor. No fim, laços que se conectam dentro e fora da sala de aula.</p>
+              
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <h5>347 a.C.</h5>
+                  <p>Após a morte de Platão, deixa Atenas e viaja pela Ásia Menor, onde realiza estudos biológicos.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <h5>343 a.C.</h5>
+                  <p>Torna-se tutor de Alexandre, o Grande, então com 13 anos.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <h5>335 a.C.</h5>
+                  <p>Retorna a Atenas e funda o Liceu, sua própria escola filosófica.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <h5>322 a.C.</h5>
+                  <p>Morre em Cálcis, na ilha de Eubeia, aos 62 anos.</p>
+                </div>
+              </div>
+            </div>
+            
+            <h3 class="section-title">Principais Contribuições</h3>
+            
+            <div class="row">
+              <div class="col-md-6">
+                <div class="concept-card">
+                  <h5><i class="bi bi-journal-bookmark"></i> Metafísica</h5>
+                  <p>Aristóteles desenvolveu o conceito de "filosofia primeira", investigando a natureza do ser e a existência. Distinguiu quatro causas para explicar a realidade: material, formal, eficiente e final.</p>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="concept-card">
+                  <h5><i class="bi bi-lightning"></i> Lógica</h5>
+                  <p>Criou o sistema de silogismos, base do pensamento lógico ocidental. Desenvolveu o Órganon, conjunto de obras que estabelece as bases do raciocínio dedutivo.</p>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="concept-card">
+                  <h5><i class="bi bi-people"></i> Ética</h5>
+                  <p>Em "Ética a Nicômaco", propôs que a felicidade (eudaimonia) é o fim último do ser humano, alcançada através do exercício da virtude como meio-termo entre extremos.</p>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="concept-card">
+                  <h5><i class="bi bi-building"></i> Política</h5>
+                  <p>Definiu o homem como "animal político" (zoon politikon). Analisou diversas formas de governo, defendendo a politeia (governo da maioria) como o regime mais equilibrado.</p>
+                </div>
+              </div>
+            </div>
+            
+            <h3 class="section-title">Aristóteles vs. Platão</h3>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">Aspecto</th>
+                    <th scope="col">Platão</th>
+                    <th scope="col">Aristóteles</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Conhecimento</td>
+                    <td>Mundo das Ideias (transcendente)</td>
+                    <td>Experiência sensível (imanente)</td>
+                  </tr>
+                  <tr>
+                    <td>Método</td>
+                    <td>Dialética e reminiscência</td>
+                    <td>Observação e classificação</td>
+                  </tr>
+                  <tr>
+                    <td>Realidade</td>
+                    <td>Ideias são a verdadeira realidade</td>
+                    <td>A substância sensível é a realidade</td>
+                  </tr>
+                  <tr>
+                    <td>Ética</td>
+                    <td>Conhecimento do bem em si</td>
+                    <td>Virtude como hábito e meio-termo</td>
+                  </tr>
+                  <tr>
+                    <td>Política</td>
+                    <td>Governo dos filósofos-reis</td>
+                    <td>Politeia (governo constitucional)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <h3 class="section-title">Legado e Influência</h3>
+            <p>Aristóteles exerceu profunda influência na filosofia ocidental, na teologia medieval (através de Tomás de Aquino) e no desenvolvimento da ciência moderna. Seu método empírico de observação e classificação é considerado precursor do método científico.</p>
+            
+            <p>Sua obra foi preservada e comentada por filósofos árabes durante a Idade Média e redescoberta na Europa no século XII, tornando-se base do pensamento escolástico. Mesmo hoje, conceitos aristotélicos continuam relevantes em campos como ética, retórica e biologia.</p>
+            
+            <div class="philosopher-quote">
+              <p>"A educação tem raízes amargas, mas os seus frutos são doces."</p>
+              <footer class="blockquote-footer">Aristóteles</footer>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Artigo da Caverna -->
-      <div class="col">
-        <div class="card article-card shadow">
-          <img src="./imagens/caverna_de_platao.png" class="article-image" alt="Alegoria da Caverna">
-          <div class="card-body text-center">
-            <h3 class="card-title mb-2">Alegoria da Caverna</h3>
-            <small class="text-muted d-block mb-3">Publicado em 19/05/2025</small>
-            <button class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#cavernaContent">
-              Expandir Artigo
-            </button>
-          </div>
-          <div class="collapse" id="cavernaContent">
-            <div class="p-4">
-              <nav class="nav nav-pills mb-4 justify-content-center">
-                <a class="nav-link active" data-bs-toggle="pill" href="#alegoria">A Alegoria</a>
-                <a class="nav-link" data-bs-toggle="pill" href="#libertacao">Libertação</a>
-                <a class="nav-link" data-bs-toggle="pill" href="#dilema">Dilema</a>
-                <a class="nav-link" data-bs-toggle="pill" href="#reflexao">Atualidade</a>
-              </nav>
-
-              <div class="tab-content">
-                <div class="tab-pane fade show active" id="alegoria">
-                  <h4 class="section-title">A Alegoria da Caverna</h4>
-                  <p>No texto, Sócrates fala para Glauco imaginar a existência de uma caverna onde prisioneiros vivessem desde a infância. Com as mãos amarradas em uma parede, eles podem avistar somente as sombras que são projetadas na parede situada à frente.</p>
-                  <p>As sombras são ocasionadas por uma fogueira, em cima de um tapume, situada na parte traseira da parede em que os homens estão presos. Homens passam ante a fogueira, fazem gestos e passam objetos, formando sombras que, de maneira distorcida, são todo o conhecimento que os prisioneiros tinham do mundo.</p>
-                  <p>Aquela parede da caverna, aquelas sombras e os ecos dos sons que as pessoas de cima produziam era o mundo restrito dos prisioneiros.</p>
-                </div>
-
-                <div class="tab-pane fade" id="libertacao">
-                  <h4 class="section-title">A Libertação do Prisioneiro</h4>
-                  <p>Repentinamente, um dos prisioneiros foi liberto. Andando pela caverna, ele percebe que havia pessoas e uma fogueira projetando as sombras que ele julgava ser a totalidade do mundo.</p>
-                  <p>Ao encontrar a saída da caverna, ele tem um susto ao deparar-se com o mundo exterior. A luz solar ofusca a sua visão e ele sente-se desamparado, desconfortável, deslocado. Aos poucos, sua visão acostuma-se com a luz e ele começa a perceber a infinidade do mundo e da natureza que existe fora da caverna.</p>
-                  <p>Ele percebe que aquelas sombras, que ele julgava ser a realidade, na verdade são cópias imperfeitas de uma pequena parcela da realidade.</p>
-                </div>
-
-                <div class="tab-pane fade" id="dilema">
-                  <h4 class="section-title">O Dilema do Prisioneiro</h4>
-                  <p>O prisioneiro liberto poderia fazer duas coisas: retornar para a caverna e libertar os seus companheiros ou viver a sua liberdade. Uma possível consequência da primeira possibilidade seria os ataques que sofreria de seus companheiros, que o julgariam como louco, mas poderia ser uma atitude necessária, por ser a coisa mais justa a se fazer.</p>
-                </div>
-
-                <div class="tab-pane fade" id="reflexao">
-                  <h4 class="section-title">Reflexão Contemporânea</h4>
-                  <p>Platão está dispondo, hierarquicamente, os graus de conhecimento com essa metáfora e falando que existe um modo de conhecer, de saber, que é o mais adequado para se pensar em um governante capaz de fazer política com sabedoria e justiça.</p>
-                  <p>Os escravos presos no interior da caverna não percebem que são prisioneiros, assim como as pessoas que estão presas na mídia, nas redes sociais e no mar de informações, muitas vezes desinformantes, da internet, não percebem que são enganadas. Vivemos na época do predomínio da opinião rasa, do conhecimento superficial, da informação inútil e da prisão cotidiana que arrasta as pessoas, cada vez mais, para a caverna da ignorância.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row row-cols-1 row-cols-lg-2 g-4 mb-5">
-      <!-- Sócrates e sofistas -->
-      <div class="col">
-        <div class="card article-card shadow">
-          <img src="./imagens/socrates_e_sofistas.png" class="article-image" alt="Sofistas">
-          <div class="card-body text-center">
-            <h3 class="card-title mb-2">Socrátes e Sofistas</h3>
-            <small class="text-muted d-block mb-3">Publicado em 28/05/2025</small>
-            <button class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#sofistasContent">
-              Expandir Artigo
-            </button>
-          </div>
-          <div class="collapse" id="sofistasContent">
-            <div class="p-4">
-              <nav class="nav nav-pills mb-4 justify-content-center">
-                <a class="nav-link active" data-bs-toggle="pill" href="#sofistas">Quem eram os Sofistas?</a>
-                <a class="nav-link" data-bs-toggle="pill" href="#principaisSofistas">Principais Sofistas Gregos</a>
-                <a class="nav-link" data-bs-toggle="pill" href="#sofistasESocrates">Sofistas e Sócrates</a>
-              </nav>
-
-              <div class="tab-content">
-                <div class="tab-pane fade show active" id="sofistas">
-                  <h4 class="section-title">Os Sofistas</h4>
-                  <p>Os sofistas foram pensadores associados ao que se convencionou chamar de "Escola Sofística", atuante nos séculos V e IV a.C. Esse grupo era formado por intelectuais e estudiosos itinerantes, especialistas em retórica e argumentação.</p>
-                  <p>Seu objetivo principal era transmitir seus conhecimentos em troca do pagamento de uma quantia pelos alunos ou aprendizes.</p>
-                  <p>Os jovens de origem aristocrática procuravam os sofistas com o intuito de adquirir conhecimentos e, principalmente, desenvolver o “aretê” — termo grego que expressa excelência, virtude e nobreza — já que, na Grécia Antiga, o desempenho político estava fortemente ligado à habilidade no uso da palavra.</p>
-                  <p>Os sofistas se distanciaram da tradição dos filósofos pré-socráticos ao questionar os valores, hábitos e convenções da sociedade ateniense daquele período.</p>
-                </div>
-
-                <div class="tab-pane fade" id="principaisSofistas">
-                  <h4 class="section-title">Principais Sofistas</h4>
-                  <p><strong>Protágoras</strong>: Nascido em Abdera, na Trácia, por volta de 481 a.C., Protágoras foi um pensador influente, acusado de negar os deuses, o que o forçou a fugir para a Sicília, onde faleceu por volta de 420 a.C., aos 70 anos. É conhecido por sua frase emblemática: “O homem é a medida de todas as coisas”, que expressa sua visão relativista.</p>
-                  <p><strong>Górgias</strong>: Originário de Leontinos, na Sicília, nasceu por volta de 483 a.C. e morreu em Lárissa, em torno de 380 a.C. Atuou como retórico e filósofo, destacando-se por valorizar a força da linguagem. Para ele, “a persuasão, por meio das palavras, molda o pensamento humano”. Viajou amplamente para divulgar suas ideias e foi embaixador de Atenas aos 60 anos. Viveu cerca de um século.</p>
-                  <p><strong>Hipías</strong>: Natural de Elis, viveu aproximadamente entre 430 a.C. e 343 a.C. Foi um sofista versátil, com domínio em áreas como oratória, astronomia, matemática, história e até artesanato. Tornou-se rico com seus ensinamentos e criou a técnica da mnemotécnica (memorização). Representou sua cidade como embaixador.</p>
-                </div>
-
-                <div class="tab-pane fade" id="sofistasESocrates">
-                  <h4 class="section-title">Sofistas e Sócrates</h4>
-                  <p>O termo “sofista” vem do grego sophistes, que deriva de sophia, significando sabedoria.</p>
-                  <p>Em oposição às ideias de “Dialética” e “Maiêutica”, propostas por Sócrates (470 a.C.–399 a.C.), os sofistas rejeitavam a noção de uma verdade universal, defendendo que a verdade era construída a partir do acordo entre as pessoas.</p>
-                  <p>Para Sócrates, a maiêutica — que literalmente quer dizer “dar à luz” — era uma técnica de questionamento usada para revelar o conhecimento interior do ser humano, como se ele estivesse adormecido ou escondido.</p>
-                  <p>Por isso, Sócrates se posicionou contra a “Escola Sofística” e seus representantes, especialmente por cobrarem altos valores para ensinar, tratando o saber como produto comercial.</p>
-                  <p>Em resumo, os sofistas acreditavam que cada pessoa compreende o mundo a partir de sua perspectiva individual. Já Sócrates sustentava que cada coisa possui uma essência ou verdade absoluta que pode ser descoberta.</p>
-                  <p>Portanto, enquanto Sócrates defendia a existência de verdades universais que a Filosofia poderia ajudar a revelar, os sofistas viam a verdade como algo subjetivo e variável.</p>
-                  <p>Apesar de sua importância, os sofistas foram duramente criticados não apenas por Sócrates, mas também por outros filósofos gregos como Platão (428 a.C.–347 a.C.) e Aristóteles (384 a.C.–322 a.C.).</p>
-                  <p>Para Platão, os sofistas não deveriam ser considerados verdadeiros filósofos, mas sim comerciantes do saber.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- NOVO ARTIGO: Teoria dos Dois Mundos -->
-      <div class="col">
-        <div class="card article-card shadow">
-          <img src="./imagens/dois_mundos_platao.png" class="article-image" alt="Teoria dos Dois Mundos de Platão">
-          <div class="card-body text-center">
-            <h3 class="card-title mb-2">Teoria dos Dois Mundos</h3>
-            <small class="text-muted d-block mb-3">Publicado em 04/06/2025</small>
-            <button class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#doisMundosContent">
-              Expandir Artigo
-            </button>
-          </div>
-          <div class="collapse" id="doisMundosContent">
-            <div class="p-4">
-              <nav class="nav nav-pills mb-4 justify-content-center">
-                <a class="nav-link active" data-bs-toggle="pill" href="#visaoGeral">Visão Geral</a>
-                <a class="nav-link" data-bs-toggle="pill" href="#mundoSensivel">Mundo Sensível</a>
-                <a class="nav-link" data-bs-toggle="pill" href="#mundoInteligivel">Mundo Inteligível</a>
-                <a class="nav-link" data-bs-toggle="pill" href="#relacao">Relação</a>
-                <a class="nav-link" data-bs-toggle="pill" href="#conhecimento">Conhecimento</a>
-                <a class="nav-link" data-bs-toggle="pill" href="#significado">Significado</a>
-              </nav>
-
-              <div class="tab-content">
-                <div class="tab-pane fade show active" id="visaoGeral">
-                  <h4 class="section-title">A Teoria dos Dois Mundos</h4>
-                  <p>Platão desenvolveu uma das teorias mais influentes da filosofia ocidental: a <strong>Teoria dos Dois Mundos</strong> (ou <strong>Dualismo Ontológico</strong>). Apresentada em obras como "A República" e "Fédon", esta teoria estabelece uma divisão radical entre dois níveis de realidade:</p>
-                  
-                  <div class="d-flex justify-content-center my-4">
-                    <div class="text-center mx-3">
-                      <div class="bg-primary text-white rounded-circle p-3 mb-2" style="width: 100px; height: 100px; display: inline-flex; align-items: center; justify-content: center;">
-                        <i class="bi bi-eye fs-1"></i>
-                      </div>
-                      <h5>Mundo Sensível</h5>
-                      <small>Realidade física</small>
-                    </div>
-                    
-                    <div class="text-center mx-3">
-                      <div class="bg-info text-white rounded-circle p-3 mb-2" style="width: 100px; height: 100px; display: inline-flex; align-items: center; justify-content: center;">
-                        <i class="bi bi-lightbulb fs-1"></i>
-                      </div>
-                      <h5>Mundo Inteligível</h5>
-                      <small>Realidade das Ideias</small>
-                    </div>
-                  </div>
-                  
-                  <p>Esta dualidade explica por que, para Platão, a filosofia é uma busca pela transcendência, libertando a alma das ilusões do sensível para contemplar as Ideias eternas.</p>
-                </div>
-
-                <div class="tab-pane fade" id="mundoSensivel">
-                  <h4 class="section-title">Mundo Sensível</h4>
-                  <p>Também chamado de <strong>Mundo das Aparências</strong>, é o mundo físico que percebemos através dos sentidos:</p>
-                  
-                  <ul class="list-group list-group-flush mb-4">
-                    <li class="list-group-item">
-                      <i class="bi bi-arrow-repeat me-2 text-primary"></i>
-                      <strong>Mutável</strong>: Tudo está em constante transformação (nasce, cresce, decai, morre)
-                    </li>
-                    <li class="list-group-item">
-                      <i class="bi bi-patch-exclamation me-2 text-primary"></i>
-                      <strong>Imperfeito</strong>: Objetos são cópias imperfeitas das Ideias
-                    </li>
-                    <li class="list-group-item">
-                      <i class="bi bi-cloud-haze me-2 text-primary"></i>
-                      <strong>Ilusório</strong>: Revela apenas aparências (doxa - opinião)
-                    </li>
-                    <li class="list-group-item">
-                      <i class="bi bi-bricks me-2 text-primary"></i>
-                      <strong>Material</strong>: Composto de elementos físicos (terra, ar, fogo, água)
-                    </li>
-                  </ul>
-                  
-                  <div class="alert alert-light">
-                    <i class="bi bi-info-circle me-2"></i>
-                    <strong>Exemplo:</strong> Uma rosa bela que murcha com o tempo é uma cópia imperfeita da Ideia eterna de Beleza.
-                  </div>
-                </div>
-
-                <div class="tab-pane fade" id="mundoInteligivel">
-                  <h4 class="section-title">Mundo Inteligível</h4>
-                  <p>O mundo das <strong>Ideias (Eidos/Formas)</strong> eternas, imutáveis e perfeitas, acessível apenas pela razão:</p>
-                  
-                  <div class="row mb-4">
-                    <div class="col-md-6">
-                      <div class="card h-100">
-                        <div class="card-body">
-                          <h5 class="card-title">Características</h5>
-                          <ul>
-                            <li><strong>Ideal e Imutável</strong>: Perfeitas e eternas</li>
-                            <li><strong>Realidade Verdadeira</strong>: Essência de todas as coisas</li>
-                            <li><strong>Incorpóreo</strong>: Existência abstrata</li>
-                            <li><strong>Hierarquizado</strong>: Ideia do Bem no topo</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="card h-100">
-                        <div class="card-body">
-                          <h5 class="card-title">Exemplos</h5>
-                          <ul>
-                            <li>Ideia de Justiça</li>
-                            <li>Ideia de Igualdade</li>
-                            <li>Ideia de Triângulo</li>
-                            <li>Ideia de Coragem</li>
-                            <li>Ideia de Humanidade</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <blockquote class="blockquote bg-light p-3 rounded">
-                    <p>"O que é belo em si mesmo? O que é o Belo em sua essência? Isso é o que devemos buscar."</p>
-                    <footer class="blockquote-footer mt-2">Platão em <cite>Fédon</cite></footer>
-                  </blockquote>
-                </div>
-
-                <div class="tab-pane fade" id="relacao">
-                  <h4 class="section-title">Relação entre os Mundos</h4>
-                  <p>Platão explica como os dois mundos se conectam:</p>
-                  
-                  <div class="row text-center mb-4">
-                    <div class="col-md-6 mb-3">
-                      <div class="p-4 border rounded bg-light">
-                        <i class="bi bi-share fs-1 text-primary mb-3"></i>
-                        <h5>Participação (Methexis)</h5>
-                        <p>Os objetos sensíveis <strong>participam</strong> das Ideias. Uma mesa é mesa porque participa da Ideia de Mesa.</p>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="p-4 border rounded bg-light">
-                        <i class="bi bi-copy fs-1 text-primary mb-3"></i>
-                        <h5>Imitação (Mimesis)</h5>
-                        <p>O mundo sensível é uma <strong>cópia imperfeita</strong> do mundo inteligível. Tudo que existe no mundo físico imita uma Forma ideal.</p>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div class="alert alert-info">
-                    <i class="bi bi-lightbulb me-2"></i>
-                    A <strong>Ideia do Bem</strong> é o princípio supremo que ilumina todas as outras Ideias, assim como o sol ilumina o mundo visível.
-                  </div>
-                </div>
-
-                <div class="tab-pane fade" id="conhecimento">
-                  <h4 class="section-title">Teoria do Conhecimento</h4>
-                  <p>Platão vincula os dois mundos a dois tipos de conhecimento:</p>
-                  
-                  <div class="table-responsive">
-                    <table class="table table-bordered">
-                      <thead class="table-light">
-                        <tr>
-                          <th>Mundo Sensível</th>
-                          <th>Mundo Inteligível</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            <strong>Doxa (Opinião)</strong>
-                            <ul class="mt-2">
-                              <li><em>Eikasia</em> (imaginação): crenças em sombras/ilusões</li>
-                              <li><em>Pistis</em> (crença): crença em objetos físicos</li>
-                            </ul>
-                          </td>
-                          <td>
-                            <strong>Episteme (Conhecimento Verdadeiro)</strong>
-                            <ul class="mt-2">
-                              <li><em>Dianoia</em> (pensamento): raciocínio matemático</li>
-                              <li><em>Noesis</em> (intuição): apreensão direta das Ideias</li>
-                            </ul>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  
-                  <div class="bg-light p-4 rounded mt-4">
-                    <h5 class="d-flex align-items-center">
-                      <i class="bi bi-link-45deg me-2 text-info"></i>
-                      Conexão com a Alegoria da Caverna
-                    </h5>
-                    <p class="mb-0">A jornada da caverna simboliza a passagem da <strong>doxa</strong> (opinião sobre sombras) para a <strong>episteme</strong> (conhecimento das Ideias verdadeiras).</p>
-                  </div>
-                </div>
-
-                <div class="tab-pane fade" id="significado">
-                  <h4 class="section-title">Significado Filosófico</h4>
-                  
-                  <div class="row mb-4">
-                    <div class="col-md-4 mb-3">
-                      <div class="card h-100 border-primary">
-                        <div class="card-body">
-                          <h5 class="card-title text-primary">Fundação do Idealismo</h5>
-                          <p class="card-text">A realidade última é espiritual/racional, não material. Influenciou toda a tradição filosófica ocidental.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                      <div class="card h-100 border-success">
-                        <div class="card-body">
-                          <h5 class="card-title text-success">Ética Platônica</h5>
-                          <p class="card-text">A virtude consiste em alinhar a alma com as Ideias, especialmente o Bem. O filósofo deve governar.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="card h-100 border-warning">
-                        <div class="card-body">
-                          <h5 class="card-title text-warning">Influência Histórica</h5>
-                          <p class="card-text">Moldou o cristianismo, neoplatonismo, racionalismo e a filosofia ocidental como um todo.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <blockquote class="blockquote bg-light p-3 rounded">
-                    <p>"Enquanto tivermos corpo e a alma estiver mergulhada nessa corrupção, jamais possuiremos o objeto do nosso desejo: a verdade."</p>
-                    <footer class="blockquote-footer mt-2">Platão em <cite>Fédon</cite></footer>
-                  </blockquote>
-                  
-                  <div class="alert alert-warning">
-                    <i class="bi bi-exclamation-triangle me-2"></i>
-                    <strong>Atualidade:</strong> Vivemos entre aparências (redes sociais, notícias falsas) e a busca pela verdade essencial. Platão nos desafia a questionar: estamos satisfeitos com as sombras ou buscamos a luz?
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- NOVO ARTIGO: Aristóteles -->
-<div class="col">
-  <div class="card article-card shadow">
-    <img src="./imagens/aristoteles.png" class="article-image" alt="Aristóteles">
-    <div class="card-body text-center">
-      <h3 class="card-title mb-2">Aristóteles – O Filósofo Universal</h3>
-      <small class="text-muted d-block mb-3">Publicado em 11/06/2025</small>
-      <button class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#aristotelesContent">
-        Expandir Artigo
-      </button>
-    </div>
-    <div class="collapse" id="aristotelesContent">
-      <div class="p-4">
-        <h4 class="section-title">🧠 Quem foi Aristóteles?</h4>
-        <p><strong>Nascimento:</strong> 384 a.C., Estagira (Macedônia)<br>
-        <strong>Morte:</strong> 322 a.C., Eubéia (Grécia)<br>
-        Foi discípulo de Platão por cerca de 20 anos e tutor de Alexandre, o Grande. Fundou o Liceu em Atenas.</p>
-
-        <h4 class="section-title">📚 Principais áreas de estudo</h4>
-        <ul class="list-group list-group-flush mb-4 text-start">
-          <li class="list-group-item">📏 <strong>Lógica:</strong> Consolidação do silogismo e lógica formal</li>
-          <li class="list-group-item">🔍 <strong>Metafísica:</strong> conceitos de ato e potência; noção do motor imóvel</li>
-          <li class="list-group-item">⚖️ <strong>Ética:</strong> virtude como hábito; Meio termo – <em>Ética a Nicômaco</em></li>
-          <li class="list-group-item">🏛️ <strong>Política:</strong> homem como “animal político”; melhor governo = bem comum – <em>Política</em></li>
-          <li class="list-group-item">🔬 <strong>Ciência e Biologia:</strong> observações da natureza; classificação de seres vivos</li>
-          <li class="list-group-item">🎭 <strong>Retórica e Arte:</strong> em <em>Poética</em>, define catarse, mimesis e tragédia</li>
-        </ul>
-
-        <h4 class="section-title">📖 Obras mais conhecidas</h4>
-        <p><em>Ética a Nicômaco, Política, Metafísica, Poética, Sobre a Alma (De Anima), Organon (lógica)</em></p>
-
-        <h4 class="section-title">🏛️ Legado</h4>
-        <p>Sua influência atravessou a Idade Média (via Tomás de Aquino) e permanece central na filosofia, na ética e na ciência política até hoje.</p>
-      </div>
-    </div>
-  </div>
-</div>
     </div>
   </main>
 
@@ -527,6 +345,18 @@
       
       document.querySelector('.scroll-top').classList.toggle('show', window.scrollY > 500)
     })
+    
+    // Destacar citações ao passar o mouse
+    document.querySelectorAll('.philosopher-quote').forEach(quote => {
+      quote.addEventListener('mouseenter', () => {
+        quote.style.transform = 'scale(1.02)';
+        quote.style.transition = 'transform 0.3s ease';
+      });
+      
+      quote.addEventListener('mouseleave', () => {
+        quote.style.transform = 'scale(1)';
+      });
+    });
   </script>
 </body>
 </html>
