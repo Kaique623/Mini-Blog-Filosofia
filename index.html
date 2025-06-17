@@ -11,33 +11,28 @@
       --main-color: #2c3e50;
       --accent-color: #3498db;
       --aristotle-color: #8b4513;
-      --plato-color: #4a6fa5;
-      --socrates-color: #6b8e23;
     }
 
     body {
       background: linear-gradient(to bottom, #f4f6f8, #ffffff);
       font-family: 'Georgia', serif;
-      color: #333;
     }
 
     .header-section {
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/1920/300?grayscale') center/cover no-repeat;
       color: white;
       padding: 3rem 0;
       margin-bottom: 2rem;
       border-radius: 0 0 15px 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     }
 
     .disclaimer-box {
-      background: rgba(44, 62, 80, 0.8);
+      background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 15px;
+      border-radius: 10px;
       padding: 1.5rem;
       backdrop-filter: blur(5px);
-      max-width: 700px;
-      margin: 0 auto;
     }
 
     .article-card {
@@ -45,55 +40,43 @@
       cursor: pointer;
       border: none;
       margin-bottom: 2rem;
-      overflow: hidden;
-      border-radius: 15px;
     }
 
     .article-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     }
 
     .article-image {
       width: 100%;
       height: 300px;
       object-fit: cover;
-      border-radius: 15px 15px 0 0;
+      border-radius: 10px;
     }
 
     .section-title {
-      border-left: 5px solid var(--aristotle-color);
-      padding-left: 1.5rem;
-      margin: 2.5rem 0 1.5rem;
+      border-left: 4px solid var(--aristotle-color);
+      padding-left: 1rem;
+      margin: 2rem 0;
       color: var(--aristotle-color);
-      font-weight: 700;
     }
 
     .philosophy-icon {
-      width: 60px;
+      width: 50px;
       filter: invert(1);
     }
 
     .scroll-top {
       position: fixed;
-      bottom: 30px;
-      right: 30px;
+      bottom: 20px;
+      right: 20px;
       opacity: 0;
-      transition: opacity 0.3s, transform 0.3s;
+      transition: opacity 0.3s;
       z-index: 1000;
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     .scroll-top.show {
       opacity: 1;
-    }
-
-    .scroll-top:hover {
-      transform: translateY(-5px);
     }
 
     .timeline {
@@ -105,213 +88,88 @@
       content: '';
       position: absolute;
       left: 50%;
-      width: 3px;
+      width: 2px;
       height: 100%;
-      background: linear-gradient(to bottom, var(--aristotle-color), #d4a76a);
+      background-color: var(--aristotle-color);
       transform: translateX(-50%);
     }
 
     .timeline-item {
       position: relative;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }
 
     .timeline-content {
       width: 45%;
-      padding: 1.5rem;
+      padding: 1rem;
       background: #f8f9fa;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      transition: transform 0.3s;
-    }
-
-    .timeline-content:hover {
-      transform: translateY(-5px);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .timeline-item:nth-child(odd) .timeline-content {
       float: left;
-      border-left: 4px solid var(--aristotle-color);
+      border-left: 3px solid var(--aristotle-color);
     }
 
     .timeline-item:nth-child(even) .timeline-content {
       float: right;
-      border-right: 4px solid var(--aristotle-color);
+      border-right: 3px solid var(--aristotle-color);
     }
 
     .philosopher-quote {
       background: linear-gradient(135deg, #f9f5eb, #eaddca);
-      border-left: 5px solid var(--aristotle-color);
-      padding: 1.8rem;
-      margin: 2.5rem 0;
-      border-radius: 0 10px 10px 0;
+      border-left: 4px solid var(--aristotle-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
       font-style: italic;
-      font-size: 1.1rem;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     }
 
     .concept-card {
       border: 1px solid #eaddca;
-      border-radius: 10px;
-      padding: 1.8rem;
-      margin-bottom: 1.8rem;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
       background: #f9f5eb;
       transition: transform 0.3s;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     }
 
     .concept-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
 
     .concept-card h5 {
       color: var(--aristotle-color);
-      border-bottom: 2px dashed #d4a76a;
-      padding-bottom: 0.7rem;
-      margin-bottom: 1.2rem;
-      font-weight: 700;
-    }
-    
-    .philosopher-header {
-      background: linear-gradient(to right, var(--aristotle-color), #6d4c41);
-      color: white;
-      padding: 2rem;
-      border-radius: 15px 15px 0 0;
-      margin-bottom: 1.5rem;
-    }
-    
-    .nav-pills .nav-link {
-      border-radius: 30px;
-      padding: 0.6rem 1.5rem;
-      margin: 0.3rem;
-      font-weight: 600;
-      transition: all 0.3s;
-      color: var(--aristotle-color);
-      border: 2px solid var(--aristotle-color);
-    }
-    
-    .nav-pills .nav-link.active {
-      background: var(--aristotle-color);
-      color: white;
-      transform: scale(1.05);
-    }
-    
-    .nav-pills .nav-link:hover:not(.active) {
-      background: rgba(139, 69, 19, 0.1);
-    }
-    
-    .tab-content {
-      padding: 1.5rem 0;
-    }
-    
-    .philosopher-icon {
-      font-size: 2.5rem;
+      border-bottom: 1px dashed #d4a76a;
+      padding-bottom: 0.5rem;
       margin-bottom: 1rem;
-      color: var(--aristotle-color);
-    }
-    
-    .philosopher-image {
-      border-radius: 10px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-      margin-bottom: 1.5rem;
-      max-height: 350px;
-      object-fit: cover;
-    }
-    
-    .comparison-card {
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-      height: 100%;
-    }
-    
-    .comparison-card:hover {
-      transform: translateY(-8px);
-    }
-    
-    .comparison-header {
-      padding: 1.5rem;
-      color: white;
-      font-weight: 700;
-    }
-    
-    .plato-card .comparison-header {
-      background: linear-gradient(to right, var(--plato-color), #3a5a8a);
-    }
-    
-    .aristotle-card .comparison-header {
-      background: linear-gradient(to right, var(--aristotle-color), #9c6644);
-    }
-    
-    .comparison-body {
-      padding: 1.5rem;
-      background: white;
     }
 
     @media (max-width: 768px) {
       .article-image {
-        height: 250px;
+        height: 200px;
       }
       
       .timeline::before {
-        left: 30px;
+        left: 20px;
       }
       
       .timeline-content {
-        width: 80%;
-        margin-left: 50px;
+        width: 85%;
+        margin-left: 40px;
       }
       
       .timeline-item:nth-child(even) .timeline-content,
       .timeline-item:nth-child(odd) .timeline-content {
         float: none;
       }
-      
-      .disclaimer-box {
-        padding: 1rem;
-      }
-    }
-    
-    .footer {
-      background: var(--main-color);
-      color: white;
-      padding: 3rem 0;
-      margin-top: 3rem;
-      border-radius: 15px 15px 0 0;
-    }
-    
-    .footer-title {
-      position: relative;
-      padding-bottom: 1rem;
-      margin-bottom: 1.5rem;
-    }
-    
-    .footer-title::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 60px;
-      height: 3px;
-      background: var(--accent-color);
-    }
-    
-    .progress-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 6px;
-      background: linear-gradient(to right, var(--aristotle-color), var(--accent-color));
-      z-index: 1001;
-      width: 0%;
-      transition: width 0.2s;
     }
   </style>
 </head>
 <body>
-  <div class="progress-bar"></div>
+  <div class="progress-bar" style="width: 0%"></div>
   <button class="btn btn-primary scroll-top rounded-circle" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
     <i class="bi bi-arrow-up"></i>
   </button>
@@ -319,21 +177,20 @@
   <header class="header-section text-center">
     <div class="container">
       <div class="disclaimer-box">
-        <i class="bi bi-journal-book fs-1 mb-3"></i>
-        <h2 class="mb-3">Escola Estadual Padre João Parreiras Villaça</h2>
-        <h1 class="mb-3">Mini Blog de Filosofia</h1>
-        <p class="lead mb-1">3° Ano Bege - Projeto Didático</p>
-        <small>Desenvolvido por alunos do Ensino Médio</small>
+        <img src="./imagens/logo.png" class="philosophy-icon mb-3" alt="Símbolo de Filosofia">
+        <h4 class="mb-3">Escola Estadual Padre João Parreiras Villaça</h4>
+        <p class="mb-1">Mini Blog de Filosofia - 3° Ano Bege</p>
+        <small>Projeto didático desenvolvido por alunos do Ensino Médio</small>
       </div>
     </div>
   </header>
 
   <main class="container py-5">
-    <!-- Grupo de Filosofia -->
-    <div class="row mb-5">
-      <div class="col">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+              <div class="col">
         <div class="card article-card shadow">
-          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" class="article-image" alt="Grupo de Filosofia">
+          <img src="./imagens/grupo_filosofia.jpg" class="article-image" alt="Grupo de Filosofia">
           <div class="card-body text-center">
             <h3 class="card-title mb-2">Sobre Nossa Equipe</h3>
             <small class="text-muted d-block mb-3">Publicado em 12/05/2025</small>
@@ -348,20 +205,20 @@
               
               <div class="row mb-4 text-center">
                 <div class="col-6 col-md-3 mb-3">
-                  <div class="badge bg-primary p-3 fs-5">Kaique</div>
+                  <div class="badge bg-primary p-2">Kaique</div>
                 </div>
                 <div class="col-6 col-md-3 mb-3">
-                  <div class="badge bg-success p-3 fs-5">Isabel</div>
+                  <div class="badge bg-success p-2">Isabel</div>
                 </div>
                 <div class="col-6 col-md-3">
-                  <div class="badge bg-warning p-3 fs-5">Lara</div>
+                  <div class="badge bg-warning p-2">Lara</div>
                 </div>
                 <div class="col-6 col-md-3">
-                  <div class="badge bg-danger p-3 fs-5">Afonso</div>
+                  <div class="badge bg-danger p-2">Afonso</div>
                 </div>
               </div>
 
-              <blockquote class="philosopher-quote">
+              <blockquote class="blockquote bg-light p-3 rounded">
                 <p>"Como Aristóteles dizia, a amizade verdadeira se constrói na virtude e no querer o bem do outro. E é isso que tentamos praticar: ajudar, ouvir e aprender uns com os outros."</p>
               </blockquote>
 
@@ -370,13 +227,11 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Alegoria da Caverna -->
-    <div class="row mb-5">
+      <!-- Artigo da Caverna -->
       <div class="col">
         <div class="card article-card shadow">
-          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" class="article-image" alt="Alegoria da Caverna">
+          <img src="./imagens/caverna_de_platao.png" class="article-image" alt="Alegoria da Caverna">
           <div class="card-body text-center">
             <h3 class="card-title mb-2">Alegoria da Caverna</h3>
             <small class="text-muted d-block mb-3">Publicado em 19/05/2025</small>
@@ -386,7 +241,7 @@
           </div>
           <div class="collapse" id="cavernaContent">
             <div class="p-4">
-              <nav class="nav nav-pills mb-4 justify-content-center flex-wrap">
+              <nav class="nav nav-pills mb-4 justify-content-center">
                 <a class="nav-link active" data-bs-toggle="pill" href="#alegoria">A Alegoria</a>
                 <a class="nav-link" data-bs-toggle="pill" href="#libertacao">Libertação</a>
                 <a class="nav-link" data-bs-toggle="pill" href="#dilema">Dilema</a>
@@ -399,9 +254,6 @@
                   <p>No texto, Sócrates fala para Glauco imaginar a existência de uma caverna onde prisioneiros vivessem desde a infância. Com as mãos amarradas em uma parede, eles podem avistar somente as sombras que são projetadas na parede situada à frente.</p>
                   <p>As sombras são ocasionadas por uma fogueira, em cima de um tapume, situada na parte traseira da parede em que os homens estão presos. Homens passam ante a fogueira, fazem gestos e passam objetos, formando sombras que, de maneira distorcida, são todo o conhecimento que os prisioneiros tinham do mundo.</p>
                   <p>Aquela parede da caverna, aquelas sombras e os ecos dos sons que as pessoas de cima produziam era o mundo restrito dos prisioneiros.</p>
-                  <div class="text-center my-4">
-                    <img src="https://images.unsplash.com/photo-1604537529428-15bcbeecfe4d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded philosopher-image" alt="Caverna de Platão">
-                  </div>
                 </div>
 
                 <div class="tab-pane fade" id="libertacao">
@@ -414,9 +266,6 @@
                 <div class="tab-pane fade" id="dilema">
                   <h4 class="section-title">O Dilema do Prisioneiro</h4>
                   <p>O prisioneiro liberto poderia fazer duas coisas: retornar para a caverna e libertar os seus companheiros ou viver a sua liberdade. Uma possível consequência da primeira possibilidade seria os ataques que sofreria de seus companheiros, que o julgariam como louco, mas poderia ser uma atitude necessária, por ser a coisa mais justa a se fazer.</p>
-                  <div class="philosopher-quote">
-                    <p>"O dever do filósofo é voltar à caverna para libertar os outros prisioneiros, mesmo que isso signifique enfrentar resistência e incompreensão."</p>
-                  </div>
                 </div>
 
                 <div class="tab-pane fade" id="reflexao">
@@ -431,11 +280,11 @@
       </div>
     </div>
 
-    <!-- Sócrates e Sofistas -->
-    <div class="row mb-5">
+    <div class="row row-cols-1 row-cols-lg-2 g-4 mb-5">
+      <!-- Sócrates e sofistas -->
       <div class="col">
         <div class="card article-card shadow">
-          <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" class="article-image" alt="Sofistas">
+          <img src="./imagens/socrates_e_sofistas.png" class="article-image" alt="Sofistas">
           <div class="card-body text-center">
             <h3 class="card-title mb-2">Socrátes e Sofistas</h3>
             <small class="text-muted d-block mb-3">Publicado em 28/05/2025</small>
@@ -445,9 +294,9 @@
           </div>
           <div class="collapse" id="sofistasContent">
             <div class="p-4">
-              <nav class="nav nav-pills mb-4 justify-content-center flex-wrap">
+              <nav class="nav nav-pills mb-4 justify-content-center">
                 <a class="nav-link active" data-bs-toggle="pill" href="#sofistas">Quem eram os Sofistas?</a>
-                <a class="nav-link" data-bs-toggle="pill" href="#principaisSofistas">Principais Sofistas</a>
+                <a class="nav-link" data-bs-toggle="pill" href="#principaisSofistas">Principais Sofistas Gregos</a>
                 <a class="nav-link" data-bs-toggle="pill" href="#sofistasESocrates">Sofistas e Sócrates</a>
               </nav>
 
@@ -462,23 +311,74 @@
 
                 <div class="tab-pane fade" id="principaisSofistas">
                   <h4 class="section-title">Principais Sofistas</h4>
-                  <div class="concept-card">
-                    <h5><i class="bi bi-person-circle me-2"></i> Protágoras</h5>
-                    <p>Nascido em Abdera, na Trácia, por volta de 481 a.C., Protágoras foi um pensador influente, acusado de negar os deuses, o que o forçou a fugir para a Sicília, onde faleceu por volta de 420 a.C., aos 70 anos. É conhecido por sua frase emblemática: “O homem é a medida de todas as coisas”, que expressa sua visão relativista.</p>
-                  </div>
-                  
-                  <div class="concept-card">
-                    <h5><i class="bi bi-person-circle me-2"></i> Górgias</h5>
-                    <p>Originário de Leontinos, na Sicília, nasceu por volta de 483 a.C. e morreu em Lárissa, em torno de 380 a.C. Atuou como retórico e filósofo, destacando-se por valorizar a força da linguagem. Para ele, “a persuasão, por meio das palavras, molda o pensamento humano”. Viajou amplamente para divulgar suas ideias e foi embaixador de Atenas aos 60 anos. Viveu cerca de um século.</p>
-                  </div>
-                  
-                  <div class="concept-card">
-                    <h5><i class="bi bi-person-circle me-2"></i> Hipías</h5>
-                    <p>Natural de Elis, viveu aproximadamente entre 430 a.C. e 343 a.C. Foi um sofista versátil, com domínio em áreas como oratória, astronomia, matemática, história e até artesanato. Tornou-se rico com seus ensinamentos e criou a técnica da mnemotécnica (memorização). Representou sua cidade como embaixador.</p>
-                  </div>
+                  <p><strong>Protágoras</strong>: Nascido em Abdera, na Trácia, por volta de 481 a.C., Protágoras foi um pensador influente, acusado de negar os deuses, o que o forçou a fugir para a Sicília, onde faleceu por volta de 420 a.C., aos 70 anos. É conhecido por sua frase emblemática: “O homem é a medida de todas as coisas”, que expressa sua visão relativista.</p>
+                  <p><strong>Górgias</strong>: Originário de Leontinos, na Sicília, nasceu por volta de 483 a.C. e morreu em Lárissa, em torno de 380 a.C. Atuou como retórico e filósofo, destacando-se por valorizar a força da linguagem. Para ele, “a persuasão, por meio das palavras, molda o pensamento humano”. Viajou amplamente para divulgar suas ideias e foi embaixador de Atenas aos 60 anos. Viveu cerca de um século.</p>
+                  <p><strong>Hipías</strong>: Natural de Elis, viveu aproximadamente entre 430 a.C. e 343 a.C. Foi um sofista versátil, com domínio em áreas como oratória, astronomia, matemática, história e até artesanato. Tornou-se rico com seus ensinamentos e criou a técnica da mnemotécnica (memorização). Representou sua cidade como embaixador.</p>
                 </div>
 
                 <div class="tab-pane fade" id="sofistasESocrates">
                   <h4 class="section-title">Sofistas e Sócrates</h4>
                   <p>O termo “sofista” vem do grego sophistes, que deriva de sophia, significando sabedoria.</p>
-   
+                  <p>Em oposição às ideias de “Dialética” e “Maiêutica”, propostas por Sócrates (470 a.C.–399 a.C.), os sofistas rejeitavam a noção de uma verdade universal, defendendo que a verdade era construída a partir do acordo entre as pessoas.</p>
+                  <p>Para Sócrates, a maiêutica — que literalmente quer dizer “dar à luz” — era uma técnica de questionamento usada para revelar o conhecimento interior do ser humano, como se ele estivesse adormecido ou escondido.</p>
+                  <p>Por isso, Sócrates se posicionou contra a “Escola Sofística” e seus representantes, especialmente por cobrarem altos valores para ensinar, tratando o saber como produto comercial.</p>
+                  <p>Em resumo, os sofistas acreditavam que cada pessoa compreende o mundo a partir de sua perspectiva individual. Já Sócrates sustentava que cada coisa possui uma essência ou verdade absoluta que pode ser descoberta.</p>
+                  <p>Portanto, enquanto Sócrates defendia a existência de verdades universais que a Filosofia poderia ajudar a revelar, os sofistas viam a verdade como algo subjetivo e variável.</p>
+                  <p>Apesar de sua importância, os sofistas foram duramente criticados não apenas por Sócrates, mas também por outros filósofos gregos como Platão (428 a.C.–347 a.C.) e Aristóteles (384 a.C.–322 a.C.).</p>
+                  <p>Para Platão, os sofistas não deveriam ser considerados verdadeiros filósofos, mas sim comerciantes do saber.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- NOVO ARTIGO: Teoria dos Dois Mundos -->
+      <div class="col">
+        <div class="card article-card shadow">
+          <img src="./imagens/dois_mundos_platao.png" class="article-image" alt="Teoria dos Dois Mundos de Platão">
+          <div class="card-body text-center">
+            <h3 class="card-title mb-2">Teoria dos Dois Mundos</h3>
+            <small class="text-muted d-block mb-3">Publicado em 04/06/2025</small>
+            <button class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#doisMundosContent">
+              Expandir Artigo
+            </button>
+          </div>
+          <div class="collapse" id="doisMundosContent">
+            <div class="p-4">
+              <nav class="nav nav-pills mb-4 justify-content-center">
+                <a class="nav-link active" data-bs-toggle="pill" href="#visaoGeral">Visão Geral</a>
+                <a class="nav-link" data-bs-toggle="pill" href="#mundoSensivel">Mundo Sensível</a>
+                <a class="nav-link" data-bs-toggle="pill" href="#mundoInteligivel">Mundo Inteligível</a>
+                <a class="nav-link" data-bs-toggle="pill" href="#relacao">Relação</a>
+                <a class="nav-link" data-bs-toggle="pill" href="#conhecimento">Conhecimento</a>
+                <a class="nav-link" data-bs-toggle="pill" href="#significado">Significado</a>
+              </nav>
+
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="visaoGeral">
+                  <h4 class="section-title">A Teoria dos Dois Mundos</h4>
+                  <p>Platão desenvolveu uma das teorias mais influentes da filosofia ocidental: a <strong>Teoria dos Dois Mundos</strong> (ou <strong>Dualismo Ontológico</strong>). Apresentada em obras como "A República" e "Fédon", esta teoria estabelece uma divisão radical entre dois níveis de realidade:</p>
+                  
+                  <div class="d-flex justify-content-center my-4">
+                    <div class="text-center mx-3">
+                      <div class="bg-primary text-white rounded-circle p-3 mb-2" style="width: 100px; height: 100px; display: inline-flex; align-items: center; justify-content: center;">
+                        <i class="bi bi-eye fs-1"></i>
+                      </div>
+                      <h5>Mundo Sensível</h5>
+                      <small>Realidade física</small>
+                    </div>
+                    
+                    <div class="text-center mx-3">
+                      <div class="bg-info text-white rounded-circle p-3 mb-2" style="width: 100px; height: 100px; display: inline-flex; align-items: center; justify-content: center;">
+                        <i class="bi bi-lightbulb fs-1"></i>
+                      </div>
+                      <h5>Mundo Inteligível</h5>
+                      <small>Realidade das Ideias</small>
+                    </div>
+                  </div>
+                  
+                  <p>Esta dualidade explica por que, para Platão, a filosofia é uma busca pela transcendência, libertando a alma das ilusões do sensível para contemplar as Ideias eternas.</p>
+                </div>
+
+                <div class="tab-pane fade" id="mundoSe
